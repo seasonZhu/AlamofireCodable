@@ -1,6 +1,6 @@
 # AlamofireCodable
 通过Alamofire请求数据,将数据一步到位转为基于遵守Codable协议的模型!
-## 不吃药不打针,不使用其他任何JSON转模型框架,使用原生的Codable协议进行JSON转模型!
+## 使用原生的Codable协议进行JSON转模型!
 例如有下面这样的JSON:
 
 ```
@@ -117,7 +117,7 @@ Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post)
 5. 涉及模型中定义自定义数据的,可以在**Demo中Model2**进行详细了解,这里只说重点,实现Decodable协议的具体方法!
 
 ## pod使用注意
-目前仅推到我自己的[私有库](https://github.com/seasonZhu/AlamofireCodable),具体如何使用,可以参看该页面的使用说明.
+目前仅推到我自己的[私有库](https://github.com/seasonZhu/SeasonSpecs),具体如何使用,可以参看该页面的使用说明.
 至于原因,是有位大哥已经使用了AlamofireCodable在Cocoapods占了坑,那位大哥的写法借鉴了AlamofireObjectMapper.我没有办法推到Cocoapods上面去.
 
 ## 文章参考
