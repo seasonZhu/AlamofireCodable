@@ -71,7 +71,7 @@
 }
 ```
 
-可以通过一些网站获取其模型,我们让每一个自定义的模型遵守Coable协议,然后如下:
+可以通过一些网站获取其模型,我们让每一个自定义的模型遵守Coable协议,如下:
 
 ```
 struct Item: Codable {
@@ -90,9 +90,10 @@ struct Topics: Codable {
 }
 ```
 
-然后我们就可以通过Alamofire和我写一个分类responseCodable获取其模型了:
+我们就可以通过Alamofire和我写一个分类方法responseCodable获取其模型了:
 
 ```
+// 获取整个模型
 Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post).responseCodable { (response: DataResponse<Topics>) in
 	guard let value = response.value else { return }
   	print(value)
