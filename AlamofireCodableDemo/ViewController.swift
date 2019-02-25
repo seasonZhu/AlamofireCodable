@@ -40,18 +40,19 @@ class ViewController: UIViewController {
         }
         // keyPath目标的请求Model
         Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post).responseCodable(queue: nil, keyPath: "list") { (response: DataResponse<[Item]>) in
-            guard let value = response.value else { return }
-            print(value)
+            guard let list = response.value else { return }
+            print(list)
         }
     }
     
     @objc
     func requestModel2() {
+        // 顶层的请求Model
         Alamofire.request("http://app.u17.com/v3/appV3_3/ios/phone/comic/boutiqueListNew", method: .post).responseCodable { (response: DataResponse<U17Root>) in
             guard let u17Root = response.value else { return }
             print(u17Root)
         }
-        
+        // keyPath目标的请求Model 可以进行深层的keyPath 使用/分割开即可
         Alamofire.request("http://app.u17.com/v3/appV3_3/ios/phone/comic/boutiqueListNew", method: .post).responseCodable(keyPath: "data/returnData/comicLists") { (response: DataResponse<[ComicList]>) in
             guard let comicLists = response.value else { return }
             print(comicLists)
