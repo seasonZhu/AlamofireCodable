@@ -109,7 +109,7 @@ Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post)
 }
 ```
 ## AlamofireCodable的优势
-1.	完全使用系统协议,不依赖于其他JSON转模型的框架,就算不使用Alamofire,可以使用原生的请求一步到位获取模型.
+1.	完全使用系统协议,不依赖于其他JSON转模型的框架,**就算不使用Alamofire,可以使用原生的请求一步到位获取模型**.
 2. 不用区分响应的是Object或者是[Object],上面的例子已经可以看出.
 3. keyPath获取深层次的keyPath下的模型,**可以在requestModel2的方法中看具体实现**,而ObjectMapper只能获取一层下面的模型.
 4. 定义的模型简单,模型类或者结构体只需要遵守Codable协议即可.
