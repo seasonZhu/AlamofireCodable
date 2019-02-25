@@ -124,4 +124,6 @@ Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post)
 
 [Using JSON with Custom Types ](https://developer.apple.com/documentation/foundation/archives_and_serialization/using_json_with_custom_types)
 
+## Demo地址
+[AlamofireCodable](https://github.com/seasonZhu/AlamofireCodable)
 
