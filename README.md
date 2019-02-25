@@ -121,6 +121,7 @@ Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post)
 
 ## 文章参考
 [Encoding and Decoding Custom Types ](https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types)
+
 [Using JSON with Custom Types ](https://developer.apple.com/documentation/foundation/archives_and_serialization/using_json_with_custom_types)
 
 
