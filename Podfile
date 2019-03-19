@@ -7,6 +7,9 @@ target 'AlamofireCodable' do
 
   # Pods for AlamofireCodable
   pod 'Alamofire'
+  
+  # 尝试使用阿里的协程
+  pod 'coswift'
 
 end
 

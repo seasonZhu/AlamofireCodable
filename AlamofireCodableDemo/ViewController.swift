@@ -9,12 +9,21 @@
 import UIKit
 import Alamofire
 import AlamofireCodable
+import coswift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        
+        co_launch {
+            let items = try TopicsRequest<[Item]>.getModel(keyPath: "list")
+            print("\(items.result)")
+            
+            let topics = try TopicsRequest<Topics>.getModel()
+            print("\(topics.result)")
+        }
     }
 
     private func setUpUI() {
@@ -60,3 +69,30 @@ class ViewController: UIViewController {
     }
 }
 
+/// 基于coswift的Promise,写了这么一大堆,为的就是避免回调
+class TopicsRequest<T: Codable> {
+    static func useCoswift(keyPath: String? = nil) -> Promise<T> {
+        let promise = Promise<T>()
+        
+        Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post).responseCodable(queue: nil, keyPath: keyPath) { (response: DataResponse<T>) in
+            if let value = response.value {
+                promise.fulfill(value: value)
+            }else if let error = response.error {
+                promise.reject(error: error)
+            }
+        }
+        
+        return promise
+    }
+    
+    static func getModel(keyPath: String? = nil) throws -> (result: T?, error: Error?) {
+        let result = try await { useCoswift(keyPath: keyPath) }
+        
+        switch result {
+        case .fulfilled(let items):
+            return (items, nil)
+        case .rejected(let error):
+            return (nil, error)
+        }
+    }
+}
