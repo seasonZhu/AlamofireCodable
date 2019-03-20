@@ -17,12 +17,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
         
+        // 将不知道到底谁先回调的情况变为可以控制的顺序执行 有的时候 这个代价还是值得
         co_launch {
             let items = try TopicsRequest<[Item]>.getModel(keyPath: "list")
-            print("\(items.result)")
-            
+            print("1:\n\(items.result)")
+            print("-------------------------------------------------------")
             let topics = try TopicsRequest<Topics>.getModel()
-            print("\(topics.result)")
+            print("2:\n\(topics.result)")
         }
     }
 
