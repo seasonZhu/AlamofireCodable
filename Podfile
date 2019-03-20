@@ -13,6 +13,18 @@ target 'AlamofireCodable' do
 
 end
 
+target 'AlamofireCoswift' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for AlamofireCodable
+  pod 'Alamofire'
+  
+  # 尝试使用阿里的协程
+  pod 'coswift'
+  
+end
+
 target 'AlamofireCodableDemo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!

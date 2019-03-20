@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireCodable
 import coswift
+import AlamofireCoswift
 
 class ViewController: UIViewController {
 
@@ -19,11 +20,22 @@ class ViewController: UIViewController {
         
         // 将不知道到底谁先回调的情况变为可以控制的顺序执行 有的时候 这个代价还是值得
         co_launch {
+            
+            // 昨天我在外面进行了封装
             let items = try TopicsRequest<[Item]>.getModel(keyPath: "list")
+            print("-------------------------------------------------------")
             print("1:\n\(items.result)")
             print("-------------------------------------------------------")
             let topics = try TopicsRequest<Topics>.getModel()
             print("2:\n\(topics.result)")
+            
+            //  今天我在Alamofire的内部进行了封装
+            let u17RootResolution: Resolution<U17Root> = try Alamofire.request("http://app.u17.com/v3/appV3_3/ios/phone/comic/boutiqueListNew", method: .post).responseCoswiftCodable()
+            print("-------------------------------------------------------")
+            print("3:\n\(u17RootResolution.value)")
+            print("-------------------------------------------------------")
+            let topicsResolution: Resolution<Topics> = try Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post).responseCoswiftCodable()
+            print("4:\n\(topicsResolution.value)")
         }
     }
 
