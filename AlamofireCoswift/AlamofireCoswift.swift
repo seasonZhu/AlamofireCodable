@@ -29,7 +29,6 @@ extension DataRequest {
         
         func coswiftPromise() -> Promise<T.SerializedObject> {
             let promise = Promise<T.SerializedObject>()
-            
             delegate.queue.addOperation {
                 let result = responseSerializer.serializeResponse(
                     self.request,
