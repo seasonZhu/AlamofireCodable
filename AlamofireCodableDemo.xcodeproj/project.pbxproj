@@ -20,6 +20,8 @@
 		611594E9222395990058DD89 /* AlamofireCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611594E8222395990058DD89 /* AlamofireCodable.swift */; };
 		611594EC222395E60058DD89 /* Model1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611594EB222395E60058DD89 /* Model1.swift */; };
 		611594EE222395F30058DD89 /* Model2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611594ED222395F30058DD89 /* Model2.swift */; };
+		611E43682255DBA000B15F67 /* URLSession+coswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611E43672255DBA000B15F67 /* URLSession+coswift.swift */; };
+		611E436A2255E09C00B15F67 /* BaiduRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611E43692255E09C00B15F67 /* BaiduRequest.swift */; };
 		61EB057B2241CF5400B84A78 /* AlamofireCoswift.h in Headers */ = {isa = PBXBuildFile; fileRef = 61EB05792241CF5400B84A78 /* AlamofireCoswift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61EB057E2241CF5400B84A78 /* AlamofireCoswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EB05772241CF5300B84A78 /* AlamofireCoswift.framework */; };
 		61EB057F2241CF5400B84A78 /* AlamofireCoswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61EB05772241CF5300B84A78 /* AlamofireCoswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -79,6 +81,8 @@
 		611594E8222395990058DD89 /* AlamofireCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireCodable.swift; sourceTree = "<group>"; };
 		611594EB222395E60058DD89 /* Model1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model1.swift; sourceTree = "<group>"; };
 		611594ED222395F30058DD89 /* Model2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model2.swift; sourceTree = "<group>"; };
+		611E43672255DBA000B15F67 /* URLSession+coswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+coswift.swift"; sourceTree = "<group>"; };
+		611E43692255E09C00B15F67 /* BaiduRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduRequest.swift; sourceTree = "<group>"; };
 		61EB05772241CF5300B84A78 /* AlamofireCoswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireCoswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EB05792241CF5400B84A78 /* AlamofireCoswift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlamofireCoswift.h; sourceTree = "<group>"; };
 		61EB057A2241CF5400B84A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				611594EA222395D20058DD89 /* CodableModel */,
 				611594C4222394290058DD89 /* AppDelegate.swift */,
 				611594C6222394290058DD89 /* ViewController.swift */,
+				611E43692255E09C00B15F67 /* BaiduRequest.swift */,
 				611594C8222394290058DD89 /* Main.storyboard */,
 				611594CB2223942B0058DD89 /* Assets.xcassets */,
 				611594CD2223942B0058DD89 /* LaunchScreen.storyboard */,
@@ -188,6 +193,7 @@
 			children = (
 				61EB05792241CF5400B84A78 /* AlamofireCoswift.h */,
 				61EB05832241CF6F00B84A78 /* AlamofireCoswift.swift */,
+				611E43672255DBA000B15F67 /* URLSession+coswift.swift */,
 				61EB057A2241CF5400B84A78 /* Info.plist */,
 			);
 			path = AlamofireCoswift;
@@ -459,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				611594EC222395E60058DD89 /* Model1.swift in Sources */,
+				611E436A2255E09C00B15F67 /* BaiduRequest.swift in Sources */,
 				611594C7222394290058DD89 /* ViewController.swift in Sources */,
 				611594EE222395F30058DD89 /* Model2.swift in Sources */,
 				611594C5222394290058DD89 /* AppDelegate.swift in Sources */,
@@ -477,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611E43682255DBA000B15F67 /* URLSession+coswift.swift in Sources */,
 				61EB05842241CF6F00B84A78 /* AlamofireCoswift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

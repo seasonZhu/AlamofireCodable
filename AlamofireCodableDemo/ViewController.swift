@@ -36,6 +36,8 @@ class ViewController: UIViewController {
             print("-------------------------------------------------------")
             let topicsResolution: Resolution<Topics> = try Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post).responseCoswiftCodable()
             print("4:\n\(topicsResolution.value)")
+            
+            let _ = try? BaiduRequest.shared.fetchWeatherData()
         }
     }
 
