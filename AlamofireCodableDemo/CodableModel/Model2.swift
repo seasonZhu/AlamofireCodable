@@ -13,9 +13,9 @@ import Foundation
  */
 
 class U17Root: Codable {
-    
-    var code: Int?
-    var data: U17Data?
+    // 如果你希望自己的模型仅仅只是接受网络请求获取的数据,不做任何改变,那么建议使用let 而不是使用var
+    let code: Int?
+    let data: U17Data?
 }
 
 class U17Data: Codable {
