@@ -128,3 +128,8 @@ Alamofire.request("http://sun.topray-media.cn/tz_inf/api/topics", method: .post)
 ## Demo地址
 [AlamofireCodable](https://github.com/seasonZhu/AlamofireCodable)
 
+## AlamofireCoswift
+
+2020年6月12日更新,今天看了看这个Demo,其实还有第二部,是关于coobjc+Alamofire的封装,天知道我之前都在写什么代码,反正使用了这个封装之后,就可以类似Python/Dart中使用await进行异步操作了,当然我太长时间没有看Alamofire的源码了,可能都需要同步更新一下才行.
+
+19年都在全身心投入在Swift中,后面渐渐接触了Flutter与Python,了解到了编程世界的宽广,还需要继续努力.
