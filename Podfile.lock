@@ -9,7 +9,7 @@ DEPENDENCIES:
   - coswift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - cocore
     - coswift
@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3b9418c1672f59b47c6cebf221b8ca020163cbf1
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.10.1
